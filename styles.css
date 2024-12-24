@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(to bottom, #ffcccc, #ff9999, #ff6666); */
+  background:black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card Styling */
+.card {
+  text-align: center;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 2s ease-in-out;
+}
+/* Card Styling */
+.card {
+  text-align: center;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  animation: slowPop 4s ease-in-out infinite; /* Added animation */
+}
+
+/* Animation Keyframes */
+@keyframes slowPop {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05); /* Slightly bigger for the pop effect */
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.card h1 {
+  font-size: 2rem;
+  color: #ff3333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+/* Emoji Styling */
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: pop 1.5s ease-in-out forwards;
+}
+
+/* Emoji Styling */
+.emoji {
+  position: absolute;
+  font-size: 2rem;
+  animation: spiralPop 2s ease-out forwards;
+}
+
+/* Spiral Animation */
+@keyframes spiralPop {
+  0% {
+      transform: scale(0);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
